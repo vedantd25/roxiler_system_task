@@ -1,0 +1,205 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.statistics {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.statistics__title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.statistics__table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.centered-header {
+  text-align: center;
+}
+
+
+.statistics__table th,
+.statistics__table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.statistics__table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.statistics__table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.statistics__table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Table Container Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table Header Styling */
+table thead {
+  background-color: #f3f4f6;
+  text-align: left;
+}
+
+table th {
+  padding: 12px 15px;
+  font-weight: bold;
+  color: #333333;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Table Body Styling */
+table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+table td {
+  padding: 12px 15px;
+  color: #555555;
+}
+
+/* Sold Column Specific Styling */
+table td:last-child {
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+table td:last-child:before {
+  content: '✓ ';
+  color: #4caf50;
+  display: none;
+}
+
+table td:last-child[data-sold="false"] {
+  color: #f44336;
+}
+
+table td:last-child[data-sold="false"]:before {
+  content: '✗ ';
+  color: #f44336;
+  display: inline;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+  }
+
+  table th,
+  table td {
+    padding: 8px 10px;
+  }
+}
+
+
+.charts-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.chart-bar, .chart-pie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-bar {
+  width: 55%; 
+  height: 500px; 
+}
+
+.chart-pie {
+  width: 40%; /* Keep pie chart smaller */
+  height: 400px; /* Optional: Set specific height for the pie chart */
+}
+
+.chart-bar canvas {
+  width: 100% !important; /* Ensure the canvas takes up full container width */
+  height: 100% !important; /* Ensure the canvas takes up full container height */
+}
+
+
+
+@media (max-width: 768px) {
+  .chart-piecontainer {
+    width: 100%; /* Full width on smaller screens */
+    margin-left: 0;
+  }
+}
