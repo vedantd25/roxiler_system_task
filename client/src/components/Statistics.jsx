@@ -6,9 +6,9 @@ const Statistics = ({ data }) => (
     <h2 className="statistics__title">Monthly Statistics</h2>
     <table className="statistics__table">
       <thead>
-        <tr>
+        <tr class="centered-header">
           <th>Metric</th>
-          <th class="centered-header">Value</th>
+          <th >Value</th>
         </tr>
       </thead>
       <tbody>

@@ -67,11 +67,72 @@
   text-align: center;
 }
 
+/* Unique class for header */
+.unique-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Unique styling for select and input within header */
+.unique-header__select,
+.unique-header__input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Additional margin for select */
+.unique-header__select {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+/* Making the input field flexible */
+.unique-header__input {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+/* Focus styles */
+.unique-header__select:focus,
+.unique-header__input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Placeholder color for input */
+.unique-header__input::placeholder {
+  color: #aaa;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .unique-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .unique-header__select,
+  .unique-header__input {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .unique-header__input {
+    margin-left: 0;
+  }
+}
 
 .statistics__table th,
 .statistics__table td {
   padding: 12px 15px;
-  text-align: left;
+  text-align: center;
 }
 
 .statistics__table th {

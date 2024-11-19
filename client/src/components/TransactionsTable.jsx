@@ -4,10 +4,10 @@ const TransactionsTable = ({ transactions }) => (
     <table>
       <thead>
         <tr>
-          <th>Title</th>
+          <th class="centered-header">Title</th>
           <th class="centered-header">Description</th>
           <th class="centered-header">Price</th>
-          <th>Sold</th>
+          <th class="centered-header">Sold</th>
         </tr>
       </thead>
       <tbody>

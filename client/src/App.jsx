@@ -40,19 +40,25 @@ const App = () => {
   return (
     <>
       <div>
-        <header>
-          <select value={month} onChange={(e) => setMonth(e.target.value)}>
-            {months.map((m) => (
-              <option key={m} value={m}>{m}</option>
-            ))}
-          </select>
-          <input
-            type="text"
-            placeholder="Search transactions..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </header>
+      <header className="unique-header">
+        <select
+          className="unique-header__select"
+          value={month}
+          onChange={(e) => setMonth(e.target.value)}
+        >
+          {months.map((m) => (
+            <option key={m} value={m}>{m}</option>
+          ))}
+        </select>
+        <input
+          className="unique-header__input"
+          type="text"
+          placeholder="Search transactions..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </header>
+
         <Statistics data={statistics} />
         <TransactionsTable transactions={transactions} />
         <div className="charts-container">
