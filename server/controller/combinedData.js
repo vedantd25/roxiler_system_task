@@ -13,7 +13,7 @@ const {
         return res.status(400).json({ error: "Invalid month" });
       }
   
-      // Await all the promises concurrently
+      
       const [priceRangeData, categoryItemCount, statisticsData] =
         await Promise.all([
           getPriceRangeDataHelper(monthNumber),
@@ -34,7 +34,7 @@ const {
     }
   }
   
-  // Helper function to get the month number
+  
   function getMonthNumber(month) {
     const monthNames = [
       "january",

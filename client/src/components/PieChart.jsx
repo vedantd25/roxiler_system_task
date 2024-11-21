@@ -3,7 +3,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import PropTypes from 'prop-types';
 import '../App.css';
 
-// Register components for Chart.js
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const PieChart = ({ data, month }) => {
@@ -11,16 +11,16 @@ const PieChart = ({ data, month }) => {
         return <div className="pie-loading">Loading...</div>;
     }
 
-    // Process data for the chart
+    
     const categories = data.map(item => item.category);
     const counts = data.map(item => item.count);
 
     const chartData = {
-        labels: categories, // Categories as labels
+        labels: categories, 
         datasets: [
             {
                 label: `Items Sold in ${month}`,
-                data: counts, // Counts as data
+                data: counts,
                 backgroundColor: [
                     '#FF6384',
                     '#36A2EB',
@@ -47,7 +47,7 @@ const PieChart = ({ data, month }) => {
     );
 };
 
-// Add PropTypes validation
+
 PieChart.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({

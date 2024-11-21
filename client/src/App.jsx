@@ -20,7 +20,7 @@ const App = () => {
   ];
 
   useEffect(() => {
-    // Fetch data on month change
+   
     fetchData();
   }, [month, search]);
 
@@ -29,12 +29,12 @@ const App = () => {
       fetchTransactions(month, 1, search),
       fetchStatistics(month),
       fetchBarChart(month),
-      fetchPieChart(month), // Fetch pie chart data
+      fetchPieChart(month), 
     ]);
     setTransactions(transactionRes.data);
     setStatistics(statsRes.data);
     setBarChartData(barChartRes.data);
-    setPieChartData(pieChartRes.data); // Set pie chart data
+    setPieChartData(pieChartRes.data); 
   };
 
   return (

@@ -20,11 +20,11 @@ exports.initializeDatabase = async (req, res) => {
  
        console.log(`Fetched ${data.length} records from the API.`);
  
-       // Clear existing records in the database
+       
        await Transaction.deleteMany({});
        console.log("Existing database records cleared.");
  
-       // Insert new data into the database
+       
        const insertedRecords = await Transaction.insertMany(data);
        console.log(`${insertedRecords.length} records successfully inserted into the database.`);
  
